@@ -37,19 +37,12 @@ public class Teste2Activity extends AppCompatActivity {
     }
 
     public String verificarPalavra(String palavra, char temp){
-        Log.i("log lenght", String.valueOf(palavra.length()));
         ArrayList<String> letras = new ArrayList<>(palavra.length());
         for (int i = 0; i < palavra.length(); i++){
-            Log.i("log i", String.valueOf(i));
-            Log.i("log temp", String.valueOf(temp));
             if(palavra.charAt(i) == temp){
-                Log.i("log position", String.valueOf(palavra.charAt(i)));
                 letras.add(String.valueOf(temp));
-                //letras.add(String.valueOf(palavra.charAt(i)));
             }
-            //else{
-                temp = palavra.charAt(i);
-            //}
+            temp = palavra.charAt(i);
         }
         return String.valueOf(letras);
     }
